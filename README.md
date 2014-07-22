@@ -1,5 +1,4 @@
 Template Customer Repo
-
 ====
 
 This is a Scala sample project. It will consist of:
