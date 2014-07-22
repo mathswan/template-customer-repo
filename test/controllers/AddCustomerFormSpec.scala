@@ -1,11 +1,11 @@
 package controllers
 
 import org.scalatest.{Matchers, WordSpec}
-import helpers.CustomerRepository.{firstNameBlank, firstNameValid, middleNameBlank, middleNameValid, lastNameBlank, lastNameValid}
+import helpers.AddCustomer.{firstNameBlank, firstNameValid, middleNameBlank, middleNameValid, lastNameBlank, lastNameValid}
 import mappings.FirstName.{firstNameMinLength, firstNameMaxLength}
 import mappings.LastName.{lastNameMinLength, lastNameMaxLength}
 
-class CustomerRepositoryFormSpec extends WordSpec with Matchers {
+class AddCustomerFormSpec extends WordSpec with Matchers {
 
   "customer form" should {
     "reject if all fields blank" in {
@@ -127,9 +127,9 @@ class CustomerRepositoryFormSpec extends WordSpec with Matchers {
   }
 
   def nameFiller(firstName: String, middleName: String, lastName: String) = {
-    val customerRepository = new CustomerRepository
+    val addCustomer = new AddCustomer
 
-    customerRepository.customerForm.bind(
+    addCustomer.customerForm.bind(
       Map(
         "firstName" -> firstName,
         "middleName" -> middleName,
@@ -137,5 +137,4 @@ class CustomerRepositoryFormSpec extends WordSpec with Matchers {
       )
     )
   }
-
 }

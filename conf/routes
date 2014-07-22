@@ -6,8 +6,8 @@
 GET     /                                   @controllers.Start.present
 
 # Customers
-GET     /customer-repository                @controllers.CustomerRepository.present
-POST    /customer-repository                @controllers.CustomerRepository.submit
+GET     /customer-repo                      @controllers.AddCustomer.present
+POST    /customer-repo                      @controllers.AddCustomer.submit
 
 # Success
 GET     /success                            @controllers.Success.present

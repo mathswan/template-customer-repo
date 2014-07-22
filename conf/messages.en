@@ -1,26 +1,28 @@
 #global
-application.title = Customer Repository
+application.title = DSD Services > Customer Repo
 
 #start
-start.title = Welcome to the customer repository
-start.h1 = Welcome to the customer repository
-start.paragraph = This is a sample application to use to get of an idea of how Play & Scala work together along with MVC. Click the button below to navigate to the next page.
-start.button = Next
+govuk.homepage = GOV.UK
+start.title = Welcome to the Customer Repo
+start.p1 = 1. This is a sample application to use to get of an idea of how Play & Scala work together along with MVC
+start.p2 = 2. This application is constantly under development and as a result certain features will not behave as expected
+start.p3 = 3. Please click a button below to begin
+start.button = Add Customer
 
-#CustomerRepository
+#add customer
 firstName = First name
 middleName = Middle name (optional)
 lastName = Last name
-customerRepository.title = Add a new customer
-customerRepository.h1 = Add a new customer
-customerRepository.p1 = Please enter customer details below for capture
-customerRepository.submit = Add customer
-customerRepository.back = Back
+addCustomer.title = Add a new customer
+addCustomer.h1 = Add a new customer
+addCustomer.p1 = Please enter customer details below for capture
+addCustomer.submit = Add customer
+addCustomer.back = Back
 error.validFirstName = First name must contain letters only
 error.validLastName = Last name must contain letters or hyphens only
 error.validMiddleName = Middle name must contain letters only when entered
 
-#Success
+#success
 success.title = Success
 success.h1 = Success
 success.paragraph = Thank you, your entry has been verified as successful

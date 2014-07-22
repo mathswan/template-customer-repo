@@ -2,7 +2,7 @@ package views
 
 import org.specs2.mutable.Specification
 import play.api.test.WithBrowser
-import helpers.{Start, CustomerRepository}
+import helpers.{Start, AddCustomer}
 import helpers.Common.localHost
 
 class StartIntegrationSpec extends Specification {
@@ -21,7 +21,7 @@ class StartIntegrationSpec extends Specification {
 
       browser.click(Start.next)
 
-      browser.pageSource must contain(CustomerRepository.title)
+      browser.pageSource must contain(AddCustomer.title)
     }
   }
 }

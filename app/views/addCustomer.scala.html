@@ -2,15 +2,14 @@
 @(customerForm: Form[models.Customer])(implicit lang: Lang)
 @import helper._
 
-@main(Messages("customerRepository.title")) {
+@main(Messages("addCustomer.title")) {
 
 <div class="container">
     <div class="row">
         <div class="form-group">
-            <h1>@Messages("customerRepository.h1")</h1>
-            <p>@Messages("customerRepository.p1")</p>
-
-            @form(routes.CustomerRepository.submit) {
+            <h1>@Messages("addCustomer.h1")</h1>
+            <p>@Messages("addCustomer.p1")</p>
+            @form(routes.AddCustomer.submit) {
             <div class="input-group">
                 @helper.inputText(customerForm("firstName"), 'id -> "firstName", 'class -> "form-control")
                 @helper.inputText(customerForm("middleName"), 'id -> "middleName", 'class -> "form-control")
@@ -18,8 +17,8 @@
             </div>
             <div class="btn-group">
                 <div>
-                <input id="addCustomer" type="submit" class="btn btn-primary" value="@Messages("customerRepository.submit")">&nbsp
-                <a id="back" href="@routes.Start.present" class="btn btn-default">@Messages("customerRepository.back")</a>
+                <input id="addCustomer" type="submit" class="btn btn-primary" value="@Messages("addCustomer.submit")">&nbsp
+                <a id="back" href="@routes.Start.present" class="btn btn-default">@Messages("addCustomer.back")</a>
                 </div>
             </div>
         </div>

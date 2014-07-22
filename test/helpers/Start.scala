@@ -1,6 +1,6 @@
 package helpers
 
 object Start {
-  val title = "Welcome to the customer repository"
+  val title = "Welcome to the Customer Repo"
   val next = "#next"
 }

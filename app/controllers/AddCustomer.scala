@@ -10,7 +10,7 @@ import constraints.FirstName.validFirstName
 import constraints.LastName.validLastName
 import constraints.MiddleName.validMiddleName
 
-class CustomerRepository extends Controller {
+class AddCustomer extends Controller {
 
   val customerForm = Form(
     mapping(
@@ -21,12 +21,12 @@ class CustomerRepository extends Controller {
   )
 
   def present = Action {
-    Ok(views.html.customerRepository(customerForm))
+    Ok(views.html.addCustomer(customerForm))
   }
 
   def submit = Action {
     implicit request => customerForm.bindFromRequest.fold(
-      formWithErrors => BadRequest(views.html.customerRepository(formWithErrors)),
+      formWithErrors => BadRequest(views.html.addCustomer(formWithErrors)),
       formValid => Ok(views.html.success(formValid))
     )
   }

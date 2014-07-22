@@ -2,24 +2,24 @@ package Integration
 
 import org.specs2.mutable.Specification
 import play.api.test.WithBrowser
-import helpers.CustomerRepository.customerRepositoryUrl
+import helpers.AddCustomer.addCustomerUrl
 import helpers.Common.localHost
-import helpers.CustomerRepository.{firstNameBlank, firstNameValid, firstNameTextBox, addCustomerButton, backButton, lastNameValid, lastNameTextBox}
-import helpers.{CustomerRepository, Start, Success}
+import helpers.AddCustomer.{firstNameBlank, firstNameValid, firstNameTextBox, addCustomerButton, backButton, lastNameValid, lastNameTextBox}
+import helpers.{AddCustomer, Start, Success}
 
-class CustomerRepositoryIntegrationSpec extends Specification {
+class AddCustomerIntegrationSpec extends Specification {
 
   "go to page" should {
     "display the page" in new WithBrowser {
-      browser.goTo(localHost + port + customerRepositoryUrl)
+      browser.goTo(localHost + port + addCustomerUrl)
 
-      browser.pageSource must contain(CustomerRepository.title)
+      browser.pageSource must contain(AddCustomer.title)
     }
   }
 
   "back button" should {
     "display the start page" in new WithBrowser {
-      browser.goTo(localHost + port + customerRepositoryUrl)
+      browser.goTo(localHost + port + addCustomerUrl)
 
       browser.click(backButton)
 
@@ -29,7 +29,7 @@ class CustomerRepositoryIntegrationSpec extends Specification {
 
   "submit" should {
     "redirect to success on correct input" in new WithBrowser {
-      browser.goTo(localHost + port + customerRepositoryUrl)
+      browser.goTo(localHost + port + addCustomerUrl)
       browser.fill(firstNameTextBox) `with` firstNameValid
       browser.fill(lastNameTextBox) `with` lastNameValid
 
@@ -39,12 +39,12 @@ class CustomerRepositoryIntegrationSpec extends Specification {
     }
 
     "stay on customer repository on incorrect input" in new WithBrowser {
-      browser.goTo(localHost + port + customerRepositoryUrl)
+      browser.goTo(localHost + port + addCustomerUrl)
       browser.fill(firstNameTextBox) `with` firstNameBlank
 
       browser.click(addCustomerButton)
 
-      browser.pageSource must contain(CustomerRepository.title)
+      browser.pageSource must contain(AddCustomer.title)
     }
   }
 }
