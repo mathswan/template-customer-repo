@@ -4,7 +4,7 @@ import org.specs2.mutable.Specification
 import play.api.test.WithBrowser
 import helpers.AddCustomer.addCustomerUrl
 import helpers.Common.localHost
-import helpers.AddCustomer.{firstNameBlank, firstNameValid, firstNameTextBox, addCustomerButton, backButton, lastNameValid, lastNameTextBox}
+import helpers.AddCustomer.{firstNameBlank, firstNameValid, firstNameTextBox, addCustomerButton, backButton, lastNameValid, lastNameTextBox, clearButton}
 import helpers.{AddCustomer, Start, Success}
 
 class AddCustomerIntegrationSpec extends Specification {
@@ -27,7 +27,7 @@ class AddCustomerIntegrationSpec extends Specification {
     }
   }
 
-  "submit" should {
+  "submit button" should {
     "redirect to success on correct input" in new WithBrowser {
       browser.goTo(localHost + port + addCustomerUrl)
       browser.fill(firstNameTextBox) `with` firstNameValid
@@ -43,6 +43,16 @@ class AddCustomerIntegrationSpec extends Specification {
       browser.fill(firstNameTextBox) `with` firstNameBlank
 
       browser.click(addCustomerButton)
+
+      browser.pageSource must contain(AddCustomer.title)
+    }
+  }
+
+  "clear button" should {
+    "redirect to add customer page" in new WithBrowser {
+      browser.goTo(localHost + port + addCustomerUrl)
+
+      browser.click(clearButton)
 
       browser.pageSource must contain(AddCustomer.title)
     }

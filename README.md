@@ -43,3 +43,9 @@ I am using [Travis CI](https://travis-ci.org/mathswan) as my build server becaus
 * It automatically builds branches.
 * It automatically builds forks!
 * It is free.
+
+Code coverage
+-------------
+When the Continuous Integration build runs, the tests will gather coverage statistics and post the results online to [Coveralls](https://coveralls.io).
+
+Offline I run the sbt plugin for [Scoverage](https://github.com/scoverage/sbt-scoverage). From the sbt console run 'scoverage:test' to make it run the tests and output statistics to html files.
