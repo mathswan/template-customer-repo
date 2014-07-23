@@ -1,12 +1,13 @@
 Template Customer Repo
 ====
 
+Build status for master branch [![Build Status](https://travis-ci.org/mathswan/template-customer-repo.svg?branch=master)](https://travis-ci.org/mathswan/template-customer-repo)
+
 This is a Scala sample project. It will consist of:
 
 * one newly created Play project with a start page, application/form page and a summary page
-* tests
+* Unit and Integration Tests
 * Twitter Bootstrap
-
 
 The point of this application is to show how to quickly setup a simple Play application which uses Git with GitHub to store it's code
 
@@ -30,3 +31,12 @@ I am using Git with Github because:
 * I am familiar with Github from using it on several projects.
 * I prefer using Git for version control as it works well with TDD's short iterations of coding.
 
+Build server
+------------
+I am using [Travis CI](https://travis-ci.org/mathswan) as my build server because:
+
+* It offers incredibly fast setup with a Github account.
+* It is hosted in the cloud (unlike a Jenkins server that runs as a local instance).
+* It automatically builds branches.
+* It automatically builds forks!
+* It is free.
