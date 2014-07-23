@@ -3,6 +3,9 @@ Template Customer Repo
 
 Build status for master branch [![Build Status](https://travis-ci.org/mathswan/template-customer-repo.svg?branch=master)](https://travis-ci.org/mathswan/template-customer-repo)
 
+Code coverage for master branch [![Coverage Status](https://coveralls.io/repos/mathswan/template-customer-repo/badge.png)](https://coveralls.io/r/mathswan/template-customer-repo)
+
+
 This is a Scala sample project. It will consist of:
 
 * one newly created Play project with a start page, application/form page and a summary page
