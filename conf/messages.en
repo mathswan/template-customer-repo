@@ -29,3 +29,8 @@ success.h1 = Success
 success.paragraph = Thank you, your entry has been verified as successful
 success.button1 = Add Another Customer
 success.button2 = Exit
+
+#error
+error.title = Error
+error.paragraph = We are sorry, an unknown error has occurred
+error.button = Exit
