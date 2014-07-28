@@ -5798,16 +5798,16 @@ body > .container {
     height: 100px
 }
 
-#bar {
+.bar {
     height: 10px;
     background: #428bca
 }
 
-#spacer {
+.spacer {
     height: 10px;
     background: transparent
 }
 
 .error {
-    background-color: #ff9999;
+    background-color: #f5a9a9;
 }

@@ -8,9 +8,9 @@
     <div class="row">
         <div class="form-group">
             <h1>@Messages("addCustomer.h1")</h1>
-            <div id="spacer"></div>
+            <div class="spacer"></div>
             <p>@Messages("addCustomer.p1")</p>
-            <div id="spacer"></div>
+            <div class="spacer"></div>
             @form(routes.AddCustomer.submit) {
             <div class="input-group">
                 @helper.inputText(customerForm("firstName"), 'id -> "firstName", 'class -> "form-control")
@@ -21,7 +21,7 @@
             <div class="input-group">
                 @helper.inputText(customerForm("lastName"), 'id -> "lastName", 'class -> "form-control")
             </div>
-            <div id="spacer"></div>
+            <div class="spacer"></div>
             <div class="btn-group">
                 <div>
                 <input id="addCustomer" type="submit" class="btn btn-primary" value="@Messages("addCustomer.submit")">&nbsp
