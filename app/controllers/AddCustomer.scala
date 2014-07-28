@@ -27,7 +27,11 @@ class AddCustomer extends Controller {
   def submit = Action {
     implicit request => customerForm.bindFromRequest.fold(
       formWithErrors => BadRequest(views.html.addCustomer(formWithErrors)),
-      formValid => Ok(views.html.success(formValid))
+      formValid => {
+        val customer = if (formValid.middleName.isEmpty) formValid.firstName + " " + formValid.lastName
+                       else formValid.firstName + " " + formValid.middleName.getOrElse("") + " " + formValid.lastName
+        Redirect(routes.Success.present(customer))
+      }
     )
   }
 }

@@ -10,7 +10,7 @@ GET     /customer-repo                      @controllers.AddCustomer.present
 POST    /customer-repo                      @controllers.AddCustomer.submit
 
 # success
-GET     /success                            @controllers.Success.present
+GET     /success                            @controllers.Success.present(customer: String)
 
 #error
 GET     /error                              @controllers.Error.present
