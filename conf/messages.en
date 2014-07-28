@@ -26,7 +26,8 @@ error.validMiddleName = Middle name must contain letters only when entered
 #success
 success.title = Success
 success.h1 = Success
-success.paragraph = Thank you, your entry has been verified as successful
+success.p1 = Thank you, your entry of
+success.p2 = has been verified as successful
 success.button1 = Add Another Customer
 success.button2 = Exit
 

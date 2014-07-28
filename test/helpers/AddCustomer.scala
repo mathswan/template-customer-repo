@@ -5,6 +5,7 @@ object AddCustomer {
   val title = "Add a new customer"
   val backButton = "#back"
   val firstNameTextBox = "#firstName"
+  val middleNameTextBox = "#middleName"
   val lastNameTextBox = "#lastName"
   val addCustomerButton = "#addCustomer"
   val clearButton = "#clear"

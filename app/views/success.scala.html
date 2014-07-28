@@ -6,15 +6,16 @@
         <h1>@Messages("success.h1")</h1>
         <div id="spacer"></div>
         <div class="form-group">
-            <p>@Messages("success.paragraph")</p>
+            <p>@Messages("success.p1") @customer.firstName @customer.middleName @customer.lastName @Messages("success.p2")</p></p>
         </div>
+        <div id="spacer"></div>
         <div class="btn-group">
-            <div id="spacer"></div>
             <div>
                 <a id="back" href="@routes.AddCustomer.present" class="btn btn-primary">@Messages("success.button1")</a>&nbsp
                 <a id="exit" href="@routes.Start.present" class="btn btn-default">@Messages("success.button2")</a>
             </div>
         </div>
+        <div id="spacer"></div>
     </div>
 </div>
 }
