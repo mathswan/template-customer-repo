@@ -12,13 +12,13 @@
             <p>@Messages("addCustomer.p1")</p>
             <div class="spacer"></div>
             @form(routes.AddCustomer.submit) {
-            <div class="input-group" style="width:75%">
+            <div class="input-group" style="width:25%">
                 @helper.inputText(customerForm("firstName"), 'id -> "firstName", 'class -> "form-control")
             </div>
-            <div class="input-group">
+            <div class="input-group" style="width:25%">
                 @helper.inputText(customerForm("middleName"), 'id -> "middleName", 'class -> "form-control")
             </div>
-            <div class="input-group">
+            <div class="input-group" style="width:25%">
                 @helper.inputText(customerForm("lastName"), 'id -> "lastName", 'class -> "form-control")
             </div>
             <div class="spacer"></div>
