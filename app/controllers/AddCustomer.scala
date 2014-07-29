@@ -27,11 +27,13 @@ class AddCustomer extends Controller {
   def submit = Action {
     implicit request => customerForm.bindFromRequest.fold(
       formWithErrors => BadRequest(views.html.addCustomer(formWithErrors)),
-      formValid => {
-        val customer = if (formValid.middleName.isEmpty) formValid.firstName + " " + formValid.lastName
-                       else formValid.firstName + " " + formValid.middleName.getOrElse("") + " " + formValid.lastName
-        Redirect(routes.Success.present(customer))
-      }
+      formValid => RedirectWithName(formValid.firstName, formValid.middleName, formValid.lastName)
     )
+  }
+
+  def RedirectWithName(firstName: String, middleName: Option[String], lastName: String) = {
+    val customer = if (middleName.isEmpty) firstName + " " + lastName
+                   else firstName + " " + middleName.getOrElse("") + " " + lastName
+    Redirect(routes.Success.present(customer))
   }
 }
